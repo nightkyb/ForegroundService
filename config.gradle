@@ -1,0 +1,132 @@
+ext {
+    appId = "com.nightkyb.foregroundservice"
+
+    build_versions = [
+            compile_sdk: 29,
+            min_sdk    : 21,
+            target_sdk : 29,
+            code       : 1,
+            name       : "1.0.0"
+    ]
+
+    versions = [
+            android_gradle_plugin: '4.1.0-rc03',
+            junit                : '4.13',
+            ext_junit            : "1.1.1",
+            espresso             : "3.2.0",
+            kotlin               : '1.4.0',
+            core_ktx             : '1.5.0-alpha01',
+            app_compat           : '1.3.0-alpha01',
+            material             : '1.3.0-alpha02',
+            constraint_layout    : '2.0.0-rc1',
+            activity             : "1.1.0",
+            fragment             : '1.2.5',
+            swipe_refresh_layout : '1.1.0',
+            startup              : '1.0.0-beta01',
+            navigation           : '2.3.0',
+            work                 : '2.3.0-alpha03',
+            lifecycle            : '2.3.0-alpha06',
+            room                 : '2.3.0-alpha02',
+            paging               : '3.0.0-alpha04',
+            camerax              : '1.0.0-beta07',
+            camerax_view         : '1.0.0-alpha14',
+            camerax_extensions   : '1.0.0-alpha14',
+            retrofit             : '2.9.0',
+            okhttp               : '4.8.1',
+            gson                 : '2.8.6',
+            rxjava2              : '2.2.19',
+            rx_android           : '2.1.1',
+            rxkotlin             : '2.4.0',
+            glide                : '4.11.0',
+            glide_transformations: "4.0.1",
+            permission           : "2.0.3",
+            permissionx          : "1.3.0",
+            logger               : "2.2.0",
+            luban                : "1.1.8",
+            bugly                : "2.6.6.1",
+            immersionbar         : "3.0.0",
+    ]
+
+    deps = [
+            android_gradle_plugin: "com.android.tools.build:gradle:$versions.android_gradle_plugin",
+            junit                : "junit:junit:$versions.junit",
+            ext_junit            : "androidx.test.ext:junit:$versions.ext_junit",
+            espresso_core        : "androidx.test.espresso:espresso-core:$versions.espresso",
+            kotlin               : [
+                    stdlib: "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin",
+                    plugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+                    noarg : "org.jetbrains.kotlin:kotlin-noarg:$versions.kotlin",
+            ],
+            core_ktx             : "androidx.core:core-ktx:$versions.core_ktx",
+            app_compat           : "androidx.appcompat:appcompat:$versions.app_compat",
+            material             : "com.google.android.material:material:$versions.material",
+            constraint_layout    : "androidx.constraintlayout:constraintlayout:$versions.constraint_layout",
+            activity             : "androidx.activity:activity-ktx:$versions.activity",
+            fragment             : "androidx.fragment:fragment-ktx:$versions.fragment",
+            swipe_refresh_layout : "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipe_refresh_layout",
+            startup              : "androidx.startup:startup-runtime:$versions.startup",
+            navigation           : [
+                    fragment_ktx             : "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+                    ui_ktx                   : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
+                    dynamic_features_fragment: "androidx.navigation:navigation-dynamic-features-fragment:$versions.navigation",
+                    safe_args_plugin         : "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigation",
+            ],
+            work                 : [
+                    runtime    : "androidx.work:work-runtime:$versions.work",
+                    runtime_ktx: "androidx.work:work-runtime-ktx:$versions.work",
+            ],
+            lifecycle            : [
+                    common              : "androidx.lifecycle:lifecycle-common:$versions.lifecycle",
+                    common_java8        : "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle",
+                    runtime_ktx         : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
+                    livedata_ktx        : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
+                    livedata_core_ktx   : "androidx.lifecycle:lifecycle-livedata-core-ktx:$versions.lifecycle",
+                    viewmodel_ktx       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+                    viewmodel_savedstate: "androidx.lifecycle:lifecycle-viewmodel-savedstate:$versions.lifecycle",
+                    service             : "androidx.lifecycle:lifecycle-service:$versions.lifecycle",
+            ],
+            room                 : [
+                    runtime : "androidx.room:room-runtime:$versions.room",
+                    ktx     : "androidx.room:room-ktx:$versions.room",
+                    compiler: "androidx.room:room-compiler:$versions.room",
+            ],
+            paging               : [
+                    runtime_ktx: "androidx.paging:paging-runtime-ktx:$versions.paging",
+            ],
+            camerax              : [
+                    core      : "androidx.camera:camera-core:$versions.camerax",
+                    camera2   : "androidx.camera:camera-camera2:$versions.camerax",
+                    view      : "androidx.camera:camera-view:$versions.camerax_view",
+                    extensions: "androidx.camera:camera-extensions:$versions.camerax_extensions",
+                    lifecycle : "androidx.camera:camera-lifecycle:$versions.camerax",
+            ],
+            retrofit             : [
+                    retrofit           : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+                    converter_gson     : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+                    converter_simplexml: "com.squareup.retrofit2:converter-simplexml:$versions.retrofit",
+            ],
+            okhttp               : [
+                    okhttp             : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+                    logging_interceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+            ],
+            gson                 : "com.google.code.gson:gson:$versions.gson",
+            rxjava2              : "io.reactivex.rxjava2:rxjava:$versions.rxjava2",
+            rx_android           : "io.reactivex.rxjava2:rxandroid:$versions.rx_android",
+            rxkotlin             : "io.reactivex.rxjava2:rxkotlin:$versions.rxkotlin",
+            glide                : [
+                    runtime            : "com.github.bumptech.glide:glide:$versions.glide",
+                    compiler           : "com.github.bumptech.glide:compiler:$versions.glide",
+                    okhttp3_integration: "com.github.bumptech.glide:okhttp3-integration:$versions.glide",
+                    transformations    : "jp.wasabeef:glide-transformations:$versions.glide_transformations",
+            ],
+            permission           : "com.yanzhenjie:permission:$versions.permission",
+            permissionx          : "com.permissionx.guolindev:permissionx:$versions.permissionx",
+            logger               : "com.orhanobut:logger:$versions.logger",
+            luban                : "top.zibin:Luban:$versions.luban",
+            bugly                : "com.tencent.bugly:crashreport:$versions.bugly",
+            immersionbar         : [
+                    runtime   : "com.gyf.immersionbar:immersionbar:$versions.immersionbar", // 基础依赖包，必须要依赖
+                    components: "com.gyf.immersionbar:immersionbar-components:$versions.immersionbar", // fragment快速实现（可选）
+            ],
+    ]
+}
